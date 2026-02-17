@@ -1,8 +1,8 @@
 # Custom Stats
 
-Custom Stats - a simple plugin for Spigot 1.21, which allows to show in chat information about the character (default). The plugin also supports the Placeholders API, which gives you the ability to fully configure config.yml for your server.
+Custom Stats - a simple plugin for Spigot 1.16-1.21.x, which allows to show in chat information about the character (default). The plugin also supports the Placeholders API, which gives you the ability to fully configure config.yml for your server.
 
-![image](https://github.com/user-attachments/assets/f41120f8-337b-4891-a4ef-ae79e93179ce)
+<img width="337" height="132" alt="image" src="https://github.com/user-attachments/assets/d72fc5cf-7ae8-4e5f-b34d-bacaa32f63a9" />
 
 ## Features
 

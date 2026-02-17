@@ -1,0 +1,11 @@
+messages:
+  no-permission: "&cУ вас нет прав для перезагрузки конфигурации."
+  config-reloaded: "&aКонфигурация CustomStats перезагружена."
+  only-player: "Только игрок может использовать эту команду."
+  no-messages: "Сообщения статистики не настроены."
+
+placeholders:
+  time-hours: "ч"
+  time-minutes: "мин"
+  distance-suffix: "м"
+  not-available: "Н/Д"

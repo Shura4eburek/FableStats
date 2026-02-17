@@ -1,0 +1,11 @@
+messages:
+  no-permission: "&cYou don't have permission to reload the config."
+  config-reloaded: "&aCustomStats config reloaded."
+  only-player: "Only a player can use this command."
+  no-messages: "No stats messages configured."
+
+placeholders:
+  time-hours: "h"
+  time-minutes: "min"
+  distance-suffix: "m"
+  not-available: "N/A"

@@ -1,0 +1,45 @@
+# CustomStats Configuration
+
+# Language (en / ru)
+# Язык плагина (en / ru)
+lang: en
+
+# Command name (must match plugin.yml)
+command: stats
+
+# Messages sent when /stats is executed
+# Supports color codes (&c, &a, &6, etc.) and PlaceholderAPI placeholders
+#
+# Available CustomStats placeholders:
+#   %customstats_time_played_total%        - Total play time (e.g. "123 h 45 min")
+#   %customstats_time_since_last_played%   - Current session duration (e.g. "1 h 30 min")
+#   %customstats_first_join_date%          - First join date (e.g. "17.02.2026")
+#   %customstats_deaths%                   - Total deaths
+#   %customstats_kills%                    - Player kills (PvP)
+#   %customstats_mob_kills%                - Mob kills
+#   %customstats_damage_dealt%             - Total damage dealt
+#   %customstats_damage_taken%             - Total damage taken
+#   %customstats_distance_walked%          - Distance walked (e.g. "1234 m")
+#
+# You can also use any PlaceholderAPI placeholder, for example:
+#   %player_name%          - Player name
+#   %player_health%        - Current health
+#   %player_level%         - Experience level
+#   %player_world%         - Current world
+#   %server_online%        - Online player count
+#
+# Full list of PlaceholderAPI placeholders:
+#   https://wiki.placeholderapi.com/users/placeholder-list/
+#
+# EN example / RU example:
+#   "&7Total played: &f..."      / "&7Всего наиграно: &f..."
+#   "&7Current session: &f..."   / "&7Текущая сессия: &f..."
+#   "&7Registration date: &f..." / "&7Дата регистрации: &f..."
+message:
+  - "&6%player_name%"
+  - "&7Total played: &f%customstats_time_played_total%"
+  - "&7Current session: &f%customstats_time_since_last_played%"
+  - "&7Registration date: &f%customstats_first_join_date%"
+  - "&7Deaths: &f%customstats_deaths%"
+  - "&7Kills: &f%customstats_kills%"
+  - "&7Mob kills: &f%customstats_mob_kills%"

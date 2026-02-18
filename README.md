@@ -1,4 +1,4 @@
-# Fable Stats
+# FableStats
 
 Fable Stats - a simple plugin for Spigot 1.16-1.21.x, which allows to show in chat information about the character (default). The plugin also supports the Placeholders API, which gives you the ability to fully configure config.yml for your server.
 

@@ -1,4 +1,4 @@
-package org.mamoru.customStats.commands;
+package org.mamoru.fableStats.commands;
 
 import be.seeseemelk.mockbukkit.MockBukkit;
 import be.seeseemelk.mockbukkit.ServerMock;
@@ -6,19 +6,19 @@ import be.seeseemelk.mockbukkit.entity.PlayerMock;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mamoru.customStats.CustomStats;
+import org.mamoru.fableStats.FableStats;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class StatsCommandExecutorTest {
 
     private ServerMock server;
-    private CustomStats plugin;
+    private FableStats plugin;
 
     @BeforeEach
     void setUp() {
         server = MockBukkit.mock();
-        plugin = MockBukkit.load(CustomStats.class);
+        plugin = MockBukkit.load(FableStats.class);
     }
 
     @AfterEach
@@ -44,7 +44,7 @@ class StatsCommandExecutorTest {
     @Test
     void reloadWithoutPermissionIsDenied() {
         PlayerMock player = server.addPlayer("TestPlayer");
-        player.addAttachment(plugin, "customstats.reload", false);
+        player.addAttachment(plugin, "fablestats.reload", false);
         player.performCommand("stats reload");
         String message = player.nextMessage();
         assertNotNull(message);
@@ -54,7 +54,7 @@ class StatsCommandExecutorTest {
     @Test
     void reloadWithPermissionWorks() {
         PlayerMock player = server.addPlayer("AdminPlayer");
-        player.addAttachment(plugin, "customstats.reload", true);
+        player.addAttachment(plugin, "fablestats.reload", true);
         player.performCommand("stats reload");
         String message = player.nextMessage();
         assertNotNull(message);

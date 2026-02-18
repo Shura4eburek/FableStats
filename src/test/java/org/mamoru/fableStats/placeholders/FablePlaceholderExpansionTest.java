@@ -1,4 +1,4 @@
-package org.mamoru.customStats.placeholders;
+package org.mamoru.fableStats.placeholders;
 
 import be.seeseemelk.mockbukkit.MockBukkit;
 import be.seeseemelk.mockbukkit.ServerMock;
@@ -8,21 +8,21 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mamoru.customStats.CustomStats;
+import org.mamoru.fableStats.FableStats;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CustomPlaceholderExpansionTest {
+class FablePlaceholderExpansionTest {
 
     private ServerMock server;
-    private CustomStats plugin;
-    private CustomPlaceholderExpansion expansion;
+    private FableStats plugin;
+    private FablePlaceholderExpansion expansion;
 
     @BeforeEach
     void setUp() {
         server = MockBukkit.mock();
-        plugin = MockBukkit.load(CustomStats.class);
-        expansion = new CustomPlaceholderExpansion(plugin);
+        plugin = MockBukkit.load(FableStats.class);
+        expansion = new FablePlaceholderExpansion(plugin);
     }
 
     @AfterEach
@@ -31,8 +31,8 @@ class CustomPlaceholderExpansionTest {
     }
 
     @Test
-    void identifierIsCustomstats() {
-        assertEquals("customstats", expansion.getIdentifier());
+    void identifierIsFablestats() {
+        assertEquals("fablestats", expansion.getIdentifier());
     }
 
     @Test
@@ -63,6 +63,13 @@ class CustomPlaceholderExpansionTest {
         PlayerMock player = server.addPlayer("TestPlayer");
         String result = expansion.onPlaceholderRequest(player, "kills");
         assertNotNull(result);
+    }
+
+    @Test
+    void playerNamePlaceholderReturnsName() {
+        PlayerMock player = server.addPlayer("TestPlayer");
+        String result = expansion.onPlaceholderRequest(player, "player_name");
+        assertEquals("TestPlayer", result);
     }
 
     @Test

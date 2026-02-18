@@ -1,6 +1,6 @@
 messages:
   no-permission: "&cУ вас нет прав для перезагрузки конфигурации."
-  config-reloaded: "&aКонфигурация CustomStats перезагружена."
+  config-reloaded: "&aКонфигурация FableStats перезагружена."
   only-player: "Только игрок может использовать эту команду."
   no-messages: "Сообщения статистики не настроены."
 

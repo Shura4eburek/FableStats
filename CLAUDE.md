@@ -16,12 +16,12 @@ Output JAR (shaded/uber JAR with dependencies) goes to `target/`. No test suite 
 
 ## Architecture
 
-Single-class monolith: `src/main/java/org/mamoru/customStats/CustomStats.java` (~200 lines).
+Main class: `src/main/java/org/mamoru/fableStats/FableStats.java`.
 
-Three inner components inside `CustomStats extends JavaPlugin`:
+Components:
 - **StatsCommandExecutor** — handles `/stats` command, processes message templates with PlaceholderAPI, sends formatted output to player
-- **CustomPlaceholderExpansion** — registers custom placeholders (`%customstats_time_played_total%`, `%customstats_time_since_last_played%`, `%customstats_first_join_date%`, `%customstats_deaths%`) and listens for `PlayerJoinEvent` to track session start times
-- **createConfig()** — generates default `config.yml` with command name and message templates
+- **FablePlaceholderExpansion** — registers custom placeholders (`%fablestats_player_name%`, `%fablestats_time_played_total%`, `%fablestats_time_since_last_played%`, `%fablestats_first_join_date%`, `%fablestats_deaths%`) and listens for `PlayerJoinEvent` to track session start times
+- **LangManager** — handles i18n (en/ru) with language files in `src/main/resources/lang/`
 
 PlaceholderAPI is a soft dependency — plugin works without it but logs a warning.
 

@@ -1,4 +1,4 @@
-package org.mamoru.customStats.placeholders;
+package org.mamoru.fableStats.placeholders;
 
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.Statistic;
@@ -8,7 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.jetbrains.annotations.NotNull;
-import org.mamoru.customStats.CustomStats;
+import org.mamoru.fableStats.FableStats;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,18 +16,18 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class CustomPlaceholderExpansion extends PlaceholderExpansion implements Listener {
+public class FablePlaceholderExpansion extends PlaceholderExpansion implements Listener {
 
-    private final CustomStats plugin;
+    private final FableStats plugin;
     private final Map<UUID, Long> sessionStartTimes = new HashMap<>();
 
-    public CustomPlaceholderExpansion(CustomStats plugin) {
+    public FablePlaceholderExpansion(FableStats plugin) {
         this.plugin = plugin;
     }
 
     @Override
     public @NotNull String getIdentifier() {
-        return "customstats";
+        return "fablestats";
     }
 
     @Override
@@ -67,6 +67,7 @@ public class CustomPlaceholderExpansion extends PlaceholderExpansion implements 
         }
 
         return switch (identifier) {
+            case "player_name" -> player.getName();
             case "time_played_total" -> {
                 long totalPlayTime = player.getStatistic(Statistic.PLAY_ONE_MINUTE) / 20;
                 yield formatTime(totalPlayTime);

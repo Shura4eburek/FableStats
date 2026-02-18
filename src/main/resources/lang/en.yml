@@ -1,6 +1,6 @@
 messages:
   no-permission: "&cYou don't have permission to reload the config."
-  config-reloaded: "&aCustomStats config reloaded."
+  config-reloaded: "&aFableStats config reloaded."
   only-player: "Only a player can use this command."
   no-messages: "No stats messages configured."
 

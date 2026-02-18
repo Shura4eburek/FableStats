@@ -1,18 +1,18 @@
-name: CustomStats
+name: FableStats
 version: '1.0'
-main: org.mamoru.customStats.CustomStats
+main: org.mamoru.fableStats.FableStats
 api-version: '1.16'
 commands:
   stats:
     description: Show player statistics
     usage: "/<command> [reload]"
-    permission: customstats.use
+    permission: fablestats.use
 softdepend:
   - PlaceholderAPI
 permissions:
-  customstats.use:
+  fablestats.use:
     description: Allows using the /stats command
     default: true
-  customstats.reload:
+  fablestats.reload:
     description: Allows reloading the plugin configuration
     default: op

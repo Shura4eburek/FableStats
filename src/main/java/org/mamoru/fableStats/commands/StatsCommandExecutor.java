@@ -1,4 +1,4 @@
-package org.mamoru.customStats.commands;
+package org.mamoru.fableStats.commands;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.ChatColor;
@@ -6,22 +6,22 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.mamoru.customStats.CustomStats;
+import org.mamoru.fableStats.FableStats;
 
 import java.util.List;
 
 public class StatsCommandExecutor implements CommandExecutor {
 
-    private final CustomStats plugin;
+    private final FableStats plugin;
 
-    public StatsCommandExecutor(CustomStats plugin) {
+    public StatsCommandExecutor(FableStats plugin) {
         this.plugin = plugin;
     }
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (args.length > 0 && args[0].equalsIgnoreCase("reload")) {
-            if (!sender.hasPermission("customstats.reload")) {
+            if (!sender.hasPermission("fablestats.reload")) {
                 sender.sendMessage(plugin.getLangManager().getMessage("no-permission"));
                 return true;
             }

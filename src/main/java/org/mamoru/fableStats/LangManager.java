@@ -1,4 +1,4 @@
-package org.mamoru.customStats;
+package org.mamoru.fableStats;
 
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;

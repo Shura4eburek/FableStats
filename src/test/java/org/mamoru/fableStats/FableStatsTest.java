@@ -1,4 +1,4 @@
-package org.mamoru.customStats;
+package org.mamoru.fableStats;
 
 import be.seeseemelk.mockbukkit.MockBukkit;
 import be.seeseemelk.mockbukkit.ServerMock;
@@ -8,15 +8,15 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CustomStatsTest {
+class FableStatsTest {
 
     private ServerMock server;
-    private CustomStats plugin;
+    private FableStats plugin;
 
     @BeforeEach
     void setUp() {
         server = MockBukkit.mock();
-        plugin = MockBukkit.load(CustomStats.class);
+        plugin = MockBukkit.load(FableStats.class);
     }
 
     @AfterEach

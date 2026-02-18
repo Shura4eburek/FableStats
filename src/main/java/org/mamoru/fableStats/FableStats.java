@@ -1,11 +1,11 @@
-package org.mamoru.customStats;
+package org.mamoru.fableStats;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.mamoru.customStats.commands.StatsCommandExecutor;
-import org.mamoru.customStats.placeholders.CustomPlaceholderExpansion;
+import org.mamoru.fableStats.commands.StatsCommandExecutor;
+import org.mamoru.fableStats.placeholders.FablePlaceholderExpansion;
 
-public class CustomStats extends JavaPlugin {
+public class FableStats extends JavaPlugin {
 
     private boolean placeholderApiEnabled;
     private LangManager langManager;
@@ -26,7 +26,7 @@ public class CustomStats extends JavaPlugin {
 
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
             placeholderApiEnabled = true;
-            CustomPlaceholderExpansion expansion = new CustomPlaceholderExpansion(this);
+            FablePlaceholderExpansion expansion = new FablePlaceholderExpansion(this);
             expansion.register();
             Bukkit.getPluginManager().registerEvents(expansion, this);
         } else {

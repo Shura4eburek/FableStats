@@ -1,0 +1,11 @@
+messages:
+  no-permission: "&cУ вас немає прав для перезавантаження конфігурації."
+  config-reloaded: "&aКонфігурацію FableStats перезавантажено."
+  only-player: "Тільки гравець може використовувати цю команду."
+  no-messages: "Повідомлення статистики не налаштовані."
+
+placeholders:
+  time-hours: "год"
+  time-minutes: "хв"
+  distance-suffix: "м"
+  not-available: "Н/Д"

@@ -1,7 +1,7 @@
 # FableStats Configuration
 
-# Language (en / ru)
-# Язык плагина (en / ru)
+# Language (en / ru / uk)
+# Язык плагина (en / ru / uk)
 lang: en
 
 # Command name (must match plugin.yml)

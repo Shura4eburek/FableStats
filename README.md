@@ -9,7 +9,7 @@ Fable Stats - a simple plugin for Spigot 1.16-1.21.x, which allows to show in ch
 - Displays player statistics via `/stats` command
 - Fully customizable messages in `config.yml`
 - PlaceholderAPI integration (optional)
-- **Multi-language support (English / Russian)**
+- **Multi-language support (English / Russian / Ukrainian)**
 
 ## Available Placeholders
 
@@ -28,7 +28,7 @@ Fable Stats - a simple plugin for Spigot 1.16-1.21.x, which allows to show in ch
 
 ## Multi-language Support
 
-The plugin supports **English** (`en`) and **Russian** (`ru`) languages. The language setting affects:
+The plugin supports **English** (`en`), **Russian** (`ru`) and **Ukrainian** (`uk`) languages. The language setting affects:
 
 - Command messages (no permission, reload confirmation, errors)
 - Placeholder units (hours, minutes, distance, N/A)
@@ -38,7 +38,7 @@ The plugin supports **English** (`en`) and **Russian** (`ru`) languages. The lan
 Set the language in `config.yml`:
 
 ```yaml
-# Language (en / ru)
+# Language (en / ru / uk)
 lang: en
 ```
 
@@ -46,15 +46,15 @@ Language files are stored in `plugins/FableStats/lang/` and are auto-generated o
 
 ### Localized strings
 
-| Key | English | Russian |
-|---|---|---|
-| `no-permission` | You don't have permission to reload the config. | У вас нет прав для перезагрузки конфигурации. |
-| `config-reloaded` | FableStats config reloaded. | Конфигурация FableStats перезагружена. |
-| `only-player` | Only a player can use this command. | Только игрок может использовать эту команду. |
-| `time-hours` | h | ч |
-| `time-minutes` | min | мин |
-| `distance-suffix` | m | м |
-| `not-available` | N/A | Н/Д |
+| Key | English | Russian | Ukrainian |
+|---|---|---|---|
+| `no-permission` | You don't have permission to reload the config. | У вас нет прав для перезагрузки конфигурации. | У вас немає прав для перезавантаження конфігурації. |
+| `config-reloaded` | FableStats config reloaded. | Конфигурация FableStats перезагружена. | Конфігурацію FableStats перезавантажено. |
+| `only-player` | Only a player can use this command. | Только игрок может использовать эту команду. | Тільки гравець може використовувати цю команду. |
+| `time-hours` | h | ч | год |
+| `time-minutes` | min | мин | хв |
+| `distance-suffix` | m | м | м |
+| `not-available` | N/A | Н/Д | Н/Д |
 
 To apply language changes, run `/stats reload` or restart the server.
 

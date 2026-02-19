@@ -4,6 +4,9 @@
 # Язык плагина (en / ru / uk)
 lang: en
 
+# Check for updates on startup and notify OPs on join (true / false)
+check-updates: true
+
 # Command name (must match plugin.yml)
 command: stats
 

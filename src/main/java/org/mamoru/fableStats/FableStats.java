@@ -24,6 +24,12 @@ public class FableStats extends JavaPlugin {
             getLogger().severe("Command '" + commandName + "' not found in plugin.yml!");
         }
 
+        if (getConfig().getBoolean("check-updates", true)) {
+            UpdateChecker updateChecker = new UpdateChecker(this);
+            updateChecker.check();
+            Bukkit.getPluginManager().registerEvents(updateChecker, this);
+        }
+
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
             placeholderApiEnabled = true;
             FablePlaceholderExpansion expansion = new FablePlaceholderExpansion(this);

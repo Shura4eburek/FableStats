@@ -48,7 +48,7 @@ class StatsCommandExecutorTest {
         player.performCommand("stats reload");
         String message = player.nextMessage();
         assertNotNull(message);
-        assertTrue(message.contains("don't have permission") || message.contains("нет прав"));
+        assertTrue(message.contains("don't have permission") || message.contains("нет прав") || message.contains("немає прав"));
     }
 
     @Test

@@ -45,4 +45,36 @@ class FableStatsTest {
     void reloadConfigDoesNotThrow() {
         assertDoesNotThrow(() -> plugin.reloadPluginConfig());
     }
+
+    @Test
+    void ukrainianLangLoadsWithoutThrowing() {
+        assertDoesNotThrow(() -> plugin.getLangManager().reload("uk"));
+    }
+
+    @Test
+    void ukrainianNoPermissionMessage() {
+        plugin.getLangManager().reload("uk");
+        String message = plugin.getLangManager().getMessage("no-permission");
+        assertTrue(message.contains("немає прав"));
+    }
+
+    @Test
+    void ukrainianConfigReloadedMessage() {
+        plugin.getLangManager().reload("uk");
+        String message = plugin.getLangManager().getMessage("config-reloaded");
+        assertTrue(message.contains("перезавантажено"));
+    }
+
+    @Test
+    void ukrainianTimeUnits() {
+        plugin.getLangManager().reload("uk");
+        assertEquals("год", plugin.getLangManager().getPlaceholder("time-hours"));
+        assertEquals("хв", plugin.getLangManager().getPlaceholder("time-minutes"));
+    }
+
+    @Test
+    void ukrainianNotAvailable() {
+        plugin.getLangManager().reload("uk");
+        assertEquals("Н/Д", plugin.getLangManager().getPlaceholder("not-available"));
+    }
 }

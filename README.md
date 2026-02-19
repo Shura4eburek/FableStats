@@ -71,4 +71,4 @@ To apply language changes, run `/stats reload` or restart the server.
 ./mvnw clean package
 ```
 
-Output JAR goes to `target/fablestats-1.0.jar`.
+Output JAR goes to `target/fablestats-1.1.jar`.

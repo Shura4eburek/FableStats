@@ -10,6 +10,7 @@ Fable Stats - a simple plugin for Spigot 1.16-1.21.x, which allows to show in ch
 - Fully customizable messages in `config.yml`
 - PlaceholderAPI integration (optional)
 - **Multi-language support (English / Russian / Ukrainian)**
+- **Automatic update notifications** — notifies OPs in-game when a new version is available
 
 ## Available Placeholders
 
@@ -57,6 +58,19 @@ Language files are stored in `plugins/FableStats/lang/` and are auto-generated o
 | `not-available` | N/A | Н/Д | Н/Д |
 
 To apply language changes, run `/stats reload` or restart the server.
+
+## Update Notifications
+
+On startup, FableStats checks [Modrinth](https://modrinth.com/plugin/SWZSZVoD) for a new version. If one is found:
+
+- A warning is printed to the console with a download link
+- OPs and admins (`fablestats.reload`) receive a chat notification with a link when they join the server
+
+Can be disabled in `config.yml`:
+
+```yaml
+check-updates: false
+```
 
 ## Commands
 
